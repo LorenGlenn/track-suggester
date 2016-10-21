@@ -1,30 +1,30 @@
-var aSelected, bSelected, cSelected, calculate, userName, resultA, resultB, resultC, resultD, progressBarValue, progressBarCalculate, insertProgress;
+var aSelected, bSelected, cSelected, calculate, userName, resultCSharp, resultCss, resultRuby, resultCSharpRuby, progressBarValue, progressBarCalculate, insertProgress;
 
 //begin backend logic
 calculate = function(){
   if (aSelected > bSelected && aSelected > cSelected) {
     progressBarValue = aSelected;
-    resultA();
+    resultCSharp();
     progressBarCalculate();
   }
   else if (bSelected > aSelected && bSelected > cSelected) {
     progressBarValue = bSelected;
-    resultB();
+    resultCss();
     progressBarCalculate();
   }
   else if (cSelected > aSelected && cSelected > bSelected) {
     progressBarValue = cSelected;
-    resultC();
+    resultRuby();
     progressBarCalculate();
   }
   else if (aSelected === bSelected){
-    resultD();
+    resultCSharpRuby();
   }
   else if (bSelected === cSelected){
-    resultE();
+    resultCssRuby();
   }
   else if (aSelected === cSelected){
-    resultF();
+    resultCSharpCss();
   }
   else {
     alert('Error, please refresh the page and try again');
@@ -58,32 +58,32 @@ $(document).ready(function(event) {
 
   });
 
-  resultA = function(){
+  resultCSharp = function(){
     $('#language').text('C# and .Net!');
     $('#top-bar-text').text('C# and .Net');
   };
 
-  resultB = function(){
+  resultCss = function(){
     $('#language').text('CSS and Design!');
     $('#top-bar-text').text('CSS and Design');
   };
 
-  resultC = function(){
+  resultRuby = function(){
     $('#language').text('Ruby on Rails!');
     $('#top-bar-text').text('Ruby on Rails');
   };
 
-  resultD = function(){
+  resultCSharpRuby = function(){
     $('#language').text("both C# and Ruby!");
     $('.progress').hide();
   }
 
-  resultE = function(){
+  resultCssRuby = function(){
     $('#language').text("both Design and Ruby!");
     $('.progress').hide();
   }
 
-  resultF = function(){
+  resultCSharpCss = function(){
     $('#language').text("both C# and Design!");
     $('.progress').hide();
   }
