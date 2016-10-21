@@ -1,9 +1,17 @@
-
+var aSelected, bSelected, cSelected;
 //begin front-end logic
 
 $(document).ready(function() {
 
-
+  $('form#quiz').submit(function(event){
+    aSelected = $('input:radio[value=a]:checked').length;
+    bSelected = $('input:radio[value=b]:checked').length;
+    cSelected = $('input:radio[value=c]:checked').length;
+    console.log(aSelected, bSelected, cSelected);
+    $('#phone-question').hide();
+    $('#result-page').show();
+    event.preventDefault();
+  });
 
 
   //begin button functionality
@@ -56,18 +64,18 @@ $(document).ready(function() {
     $('#appsize-question').hide();
     $('#interaction-question').show();
   });
-  $('button#quiz-submit').click(function(){
-    $('#phone-question').hide();
-    $('#result-page').show();
-  });
   $('button#phone-prev').click(function(){
     $('#phone-question').hide();
     $('#appsize-question').show();
   });
-  $('button#retake').click(function(){
-    $('#result-page').hide();
-    $('#name-question').show();
-
+  // $('button#retake').click(function(){
+  //   $('#result-page').hide();
+  //   $('#name-question').show();
+  //   $("input:radio").removeProp("checked");
+  //   aSelected = 0;
+  //   bSelected = 0;
+  //   cSelected = 0;
+  // });
 //end button functionality
-  });
+
 });

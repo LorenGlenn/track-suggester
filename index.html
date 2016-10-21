@@ -175,11 +175,23 @@
               </label>
             </div>
             <p>
-              <button class="btn btn-primary" type="button" id="phone-prev">Prev</button> Question 7/7 <button class="btn btn-primary" type="button" id="quiz-submit">Submit</button>
+              <button class="btn btn-primary" type="button" id="phone-prev">Prev</button> Question 7/7 <button class="btn btn-primary" type="submit" id="quiz-submit">Submit</button>
             </p>
           </div>
           <div class="quiz-question" id="result-page">
-            <button type="button" id="retake">Retake the Quiz!</button>
+            <div class="progress">
+              <div class="progress-bar progress-bar-info" role="progressbar" id="top-bar">
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" id="middle-bar">
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-warning" role="progressbar" id="bottom-bar">
+              </div>
+            </div>
+            <!-- <button type="button" id="retake">Retake the Quiz!</button> -->
           </div>
         </form>
       </div>
