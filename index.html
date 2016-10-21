@@ -17,15 +17,21 @@
         </p>
       </div>
       <div class="well">
-        <img id="robot"
+
+        <h2>
+          <img id="robot"
          src="http://freevector.co/wp-content/uploads/2014/06/48593-small-robot-with-arms-and-legs.png" alt="robot" />
-        <h2>Track Suggester 3000</h2>
+         Track Suggester 3000
+        </h2>
+        <div id="start">
+          <button class="btn btn-primary" type="button" id="start-button">Begin Quiz!</button>
+        </div>
         <form id="quiz">
           <div id="name-question" class="quiz-question">
             <label for="name">What's your name?:</label>
             <input type="text" id="name">
             <p>
-              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 1/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+              <button class="btn btn-primary" type="button" disabled>Prev</button> Question 1/7 <button class="btn btn-primary" type="button" id="name-next">Next</button>
             </p>
           </div>
           <div class="quiz-question" id="company-question">
@@ -49,7 +55,7 @@
               </label>
             </div>
             <p>
-              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 2/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+              <button class="btn btn-primary" type="button" id="company-prev">Prev</button> Question 2/7 <button class="btn btn-primary" type="button" id="company-next">Next</button>
             </p>
           </div>
           <div class="quiz-question" id="design-question">
@@ -73,7 +79,7 @@
               </label>
             </div>
             <p>
-              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 3/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+              <button class="btn btn-primary" type="button" id="design-prev">Prev</button> Question 3/7 <button class="btn btn-primary" type="button" id="design-next">Next</button>
             </p>
           </div>
           <div class="quiz-question" id="backend-question">
@@ -97,7 +103,7 @@
               </label>
             </div>
             <p>
-              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 4/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+              <button class="btn btn-primary" type="button" id="backend-prev">Prev</button> Question 4/7 <button class="btn btn-primary" type="button" id="backend-next">Next</button>
             </p>
           </div>
           <div class="quiz-question" id="interaction-question">
@@ -121,7 +127,7 @@
               </label>
             </div>
             <p>
-              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 5/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+              <button class="btn btn-primary" type="button" id="interaction-prev">Prev</button> Question 5/7 <button class="btn btn-primary" type="button" id="interaction-next">Next</button>
             </p>
           </div>
           <div class="quiz-question" id="appsize-question">
@@ -145,7 +151,7 @@
               </label>
             </div>
             <p>
-              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 6/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+              <button class="btn btn-primary" type="button" id="appsize-prev">Prev</button> Question 6/7 <button class="btn btn-primary" type="button" id="appsize-next">Next</button>
             </p>
           </div>
           <div class="quiz-question" id="phone-question">
@@ -169,12 +175,11 @@
               </label>
             </div>
             <p>
-              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 7/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+              <button class="btn btn-primary" type="button" id="phone-prev">Prev</button> Question 7/7 <button class="btn btn-primary" type="button" id="quiz-submit">Submit</button>
             </p>
           </div>
         </form>
       </div>
-
     </div>
   </body>
 </html>
