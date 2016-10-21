@@ -1,3 +1,35 @@
+body{
+  background-color: #343434;
+  color: #6c6c6c;
+}
+
+label {
+  font-size: 16pt;
+  text-align: left;
+}
+
+p {
+  text-align: center;
+  padding-top: 20px;
+}
+
+button {
+  margin: 0 20px 0 20px;
+}
+
+h3{
+  padding-bottom: 30px;
+}
+
+#brand {
+  background-color: #883232;
+  margin-left: 28%;
+  margin-right: 28%;
+  color: black;
+  border-radius: 5px;
+  border: 3px dashed black;
+}
+
 #robot{
   width: 100px;
 }
@@ -6,7 +38,15 @@
   text-align: center;
 }
 
-#beep, #boop, #calculating, #track-says {
+#name-question {
+  text-align: center;
+}
+
+#name-question label, #name-question input{
+  margin-bottom: 50px;
+}
+
+#beep, #boop, #calculating {
   display: none;
   font-size: 3em;
   font-family: monospace;
@@ -14,16 +54,25 @@
   padding-top: 10px;
 }
 
-#response, #top-bar {
+#track-says {
+  display: none;
+  font-size: 3em;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+}
+
+#response{
+  display: none;
+  font-family: monospace;
+  font-size: 3em;
+}
+
+#top-bar {
   display: none;
 }
 
 #result-page {
   margin-top: 30px;
-}
-
-#response h3{
-  padding-bottom: 30px;
 }
 
 h4, h3, h2, #output {
@@ -32,10 +81,19 @@ h4, h3, h2, #output {
 
 .quiz-question {
   display: none;
-  margin: 150px 0 0 50px;
+  margin: 80px 0 0 50px;
+  padding: 20px;
 }
 
 .jumbotron {
   text-align: center;
   margin: 50px 0 150px 0;
+}
+
+.jumbotron h1 {
+  color: #883232;
+}
+
+.progress {
+  height: 30px !important;
 }

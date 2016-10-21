@@ -17,8 +17,14 @@ calculate = function(){
     resultC();
     progressBarCalculate();
   }
-  else if (aSelected === bSelected || aSelected === cSelected || cSelected === bSelected){
+  else if (aSelected === bSelected){
     resultD();
+  }
+  else if (bSelected === cSelected){
+    resultE();
+  }
+  else if (aSelected === cSelected){
+    resultF();
   }
   else {
     alert('Error, please refresh the page and try again');
@@ -32,9 +38,9 @@ progressBarCalculate = function() {
 }
 
 //begin frontend logic
-$(document).ready(function() {
+$(document).ready(function(event) {
 
-  $('button#quiz-submit').click(function(event){
+  $('button#quiz-submit').click(function(){
     aSelected = $('input:radio[value=a]:checked').length;
     bSelected = $('input:radio[value=b]:checked').length;
     cSelected = $('input:radio[value=c]:checked').length;
@@ -43,13 +49,13 @@ $(document).ready(function() {
     $('#user-name').text(userName);
     $('#phone-question').hide();
     $('#result-page').fadeIn(1000);
+    $('#track-says').fadeIn(1000);
     $('#beep').delay(1000).fadeIn(1000);
-    $('#boop').delay(3000).fadeIn(1000);
-    $('#calculating').delay(5000).fadeIn(1000);
-    $('#track-says').delay(7000).fadeIn(1000);
-    $('#response').delay(7000).fadeIn(1000);
-    $('#top-bar').delay(7000).fadeIn(1000);
-    event.preventDefault();
+    $('#boop').delay(2500).fadeIn(1000);
+    $('#calculating').delay(4000).fadeIn(1000);
+    $('#response').delay(5500).fadeIn(1000);
+    $('#top-bar').delay(5500).fadeIn(1000);
+
   });
 
   resultA = function(){
@@ -68,7 +74,17 @@ $(document).ready(function() {
   };
 
   resultD = function(){
-    $('#language').text("more than one language!");
+    $('#language').text("both C# and Ruby!");
+    $('.progress').hide();
+  }
+
+  resultE = function(){
+    $('#language').text("both Design and Ruby!");
+    $('.progress').hide();
+  }
+
+  resultF = function(){
+    $('#language').text("both C# and Design!");
     $('.progress').hide();
   }
 
@@ -131,14 +147,7 @@ $(document).ready(function() {
     $('#phone-question').hide();
     $('#appsize-question').fadeIn(1000);
   });
-  // $('button#retake').click(function(){
-  //   $('#result-page').hide();
-  //   $('#name-question').show();
-  //   $("input:radio").removeProp("checked");
-  //   aSelected = 0;
-  //   bSelected = 0;
-  //   cSelected = 0;
-  // });
+  event.preventDefault();
 //end button functionality
 
 });
