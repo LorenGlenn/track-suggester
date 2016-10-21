@@ -1,17 +1,31 @@
-var aSelected, bSelected, cSelected;
-//begin front-end logic
+var aSelected, bSelected, cSelected, calculate, userName;
 
+//begin backend logic
+calculate = function(){
+  if (aSelected > bSelected && aSelected > cSelected) {
+
+  }
+  else if (bSelected > aSelected && bSelected > cSelected) {
+
+  }
+};
+
+
+
+//begin frontend logic
 $(document).ready(function() {
 
   $('form#quiz').submit(function(event){
     aSelected = $('input:radio[value=a]:checked').length;
     bSelected = $('input:radio[value=b]:checked').length;
     cSelected = $('input:radio[value=c]:checked').length;
-    console.log(aSelected, bSelected, cSelected);
+    userName = $('input#name').val();
+    calculate();
     $('#phone-question').hide();
     $('#result-page').show();
     event.preventDefault();
   });
+
 
 
   //begin button functionality
