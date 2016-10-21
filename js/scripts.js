@@ -1,15 +1,21 @@
-var aSelected, bSelected, cSelected, calculate, userName, resultA, resultB, resultC, resultD;
+var aSelected, bSelected, cSelected, calculate, userName, resultA, resultB, resultC, resultD, progressBarValue, progressBarCalculate, insertProgress;
 
 //begin backend logic
 calculate = function(){
   if (aSelected > bSelected && aSelected > cSelected) {
+    progressBarValue = aSelected;
     resultA();
+    progressBarCalculate();
   }
   else if (bSelected > aSelected && bSelected > cSelected) {
+    progressBarValue = bSelected;
     resultB();
+    progressBarCalculate();
   }
   else if (cSelected > aSelected && cSelected > bSelected) {
+    progressBarValue = cSelected;
     resultC();
+    progressBarCalculate();
   }
   else if (aSelected === bSelected || aSelected === cSelected || cSelected === bSelected){
     resultD();
@@ -19,12 +25,16 @@ calculate = function(){
   }
 };
 
-
+progressBarCalculate = function() {
+  progressBarValue = parseInt(progressBarValue * (100 / 6));
+  console.log(progressBarValue);
+  insertProgress();
+}
 
 //begin frontend logic
 $(document).ready(function() {
 
-  $('form#quiz').submit(function(event){
+  $('button#quiz-submit').click(function(event){
     aSelected = $('input:radio[value=a]:checked').length;
     bSelected = $('input:radio[value=b]:checked').length;
     cSelected = $('input:radio[value=c]:checked').length;
@@ -33,6 +43,12 @@ $(document).ready(function() {
     $('#user-name').text(userName);
     $('#phone-question').hide();
     $('#result-page').fadeIn(1000);
+    $('#beep').delay(1000).fadeIn(1000);
+    $('#boop').delay(3000).fadeIn(1000);
+    $('#calculating').delay(5000).fadeIn(1000);
+    $('#track-says').delay(7000).fadeIn(1000);
+    $('#response').delay(7000).fadeIn(1000);
+    $('#top-bar').delay(7000).fadeIn(1000);
     event.preventDefault();
   });
 
@@ -53,8 +69,13 @@ $(document).ready(function() {
 
   resultD = function(){
     $('#language').text("more than one language!");
+    $('.progress').hide();
   }
 
+  insertProgress = function(){
+    $('#top-bar').css("width", progressBarValue + "%");
+    $('#top-bar-text').append(" " + progressBarValue + "%")
+  }
 
   //begin button functionality
 

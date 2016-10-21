@@ -6,7 +6,27 @@
   text-align: center;
 }
 
-h2 {
+#beep, #boop, #calculating, #track-says {
+  display: none;
+  font-size: 3em;
+  font-family: monospace;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#response, #top-bar {
+  display: none;
+}
+
+#result-page {
+  margin-top: 30px;
+}
+
+#response h3{
+  padding-bottom: 30px;
+}
+
+h4, h3, h2, #output {
   text-align: center;
 }
 
@@ -18,8 +38,4 @@ h2 {
 .jumbotron {
   text-align: center;
   margin: 50px 0 150px 0;
-}
-
-h4 {
-  text-align: center;
 }

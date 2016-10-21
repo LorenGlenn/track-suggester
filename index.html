@@ -38,19 +38,19 @@
             <h3>What size company would you like to work for?:</h3>
             <div class="radio">
               <label>
-                <input type="radio" name="company-large" value="a">
+                <input type="radio" name="company" value="a">
                 Large
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="company-small" value="b">
+                <input type="radio" name="company" value="b">
                 Small
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="company-no" value="c">
+                <input type="radio" name="company" value="c">
                 No Preference
               </label>
             </div>
@@ -62,19 +62,19 @@
             <h3>Do you think spending time to make things look neat is boring?:</h3>
             <div class="radio">
               <label>
-                <input type="radio" name="design-yes" value="a">
+                <input type="radio" name="design" value="a">
                 Yes!
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="design-no" value="b">
+                <input type="radio" name="design" value="b">
                 Not at all
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="design-somewhat" value="c">
+                <input type="radio" name="design" value="c">
                 Somewhat
               </label>
             </div>
@@ -86,19 +86,19 @@
             <h3>Do you enjoy taking things apart to learn how they work?:</h3>
             <div class="radio">
               <label>
-                <input type="radio" name="backend-yes" value="a">
+                <input type="radio" name="backend" value="a">
                 Yes!
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="backend-somewhat" value="b">
+                <input type="radio" name="backend" value="b">
                 Somewhat
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="backend-no" value="c">
+                <input type="radio" name="backend" value="c">
                 Not really (and I usually can't put them back together)
               </label>
             </div>
@@ -110,19 +110,19 @@
             <h3>After you've made a website, do you like to customize it to be easier for people to use?:</h3>
             <div class="radio">
               <label>
-                <input type="radio" name="interaction-yes" value="b">
+                <input type="radio" name="interaction" value="b">
                 Yep!
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="interaction-somewhat" value="c">
+                <input type="radio" name="interaction" value="c">
                 Meh... sorta
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="interaction-no" value="a">
+                <input type="radio" name="interaction" value="a">
                 No thanks!
               </label>
             </div>
@@ -134,19 +134,19 @@
             <h3>Do you want to build massive applications or small quick ones?:</h3>
             <div class="radio">
               <label>
-                <input type="radio" name="appsize-large" value="a">
+                <input type="radio" name="appsize" value="a">
                 Massive
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="appsize-small" value="b">
+                <input type="radio" name="appsize" value="b">
                 Smaller
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="appsize-no" value="c">
+                <input type="radio" name="appsize" value="c">
                 No Preference
               </label>
             </div>
@@ -158,28 +158,36 @@
             <h3>What kind of phone do you use?:</h3>
             <div class="radio">
               <label>
-                <input type="radio" name="phone-android" value="a">
+                <input type="radio" name="phone" value="a">
                 Android
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="phone-apple" value="b">
+                <input type="radio" name="phone" value="b">
                 iPhone
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="phone-other" value="c">
+                <input type="radio" name="phone" value="c">
                 Other
               </label>
             </div>
             <p>
-              <button class="btn btn-primary" type="button" id="phone-prev">Prev</button> Question 7/7 <button class="btn btn-primary" type="submit" id="quiz-submit">Submit</button>
+              <button class="btn btn-primary" type="button" id="phone-prev">Prev</button> Question 7/7 <button class="btn btn-primary" type="button" id="quiz-submit">Submit</button>
             </p>
           </div>
           <div class="quiz-question" id="result-page">
-            <h3><span id="user-name"></span>, looks like you're a good match for <span id="language"></span></h3>
+            <div id="output">
+              <span id="beep">Beep... </span><span id="boop"> Boop... </span><span id="calculating"> Calculating...</span>
+            </div>
+            <div id="track-says">
+              <p>
+                Track Suggester 3000 says:
+              </p><br>
+            </div>
+            <h3 id="response"><span id="user-name"></span>, looks like you're a good match for <span id="language"></span></h3>
             <div class="progress">
               <div class="progress-bar progress-bar-info" role="progressbar" id="top-bar"><span id="top-bar-text"></span>
               </div>
