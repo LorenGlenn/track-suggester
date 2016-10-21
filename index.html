@@ -17,32 +17,160 @@
         </p>
       </div>
       <div class="well">
+        <img id="robot"
+         src="http://freevector.co/wp-content/uploads/2014/06/48593-small-robot-with-arms-and-legs.png" alt="robot" />
         <h2>Track Suggester 3000</h2>
         <form id="quiz">
-          <div class="quiz-sections">
+          <div id="name-question" class="quiz-question">
             <label for="name">What's your name?:</label>
             <input type="text" id="name">
+            <p>
+              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 1/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+            </p>
           </div>
-          <div class="quiz-sections">
+          <div class="quiz-question" id="company-question">
             <h3>What size company would you like to work for?:</h3>
             <div class="radio">
               <label>
-                <input type="radio" name="company" value="large">
+                <input type="radio" name="company-large" value="large">
                 Large
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="company" value="small">
+                <input type="radio" name="company-small" value="small">
                 Small
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="company" value="no-preference">
+                <input type="radio" name="company-no" value="no-preference">
                 No Preference
               </label>
             </div>
+            <p>
+              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 2/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+            </p>
+          </div>
+          <div class="quiz-question" id="design-question">
+            <h3>Do you enjoy spending time to make things look neat?:</h3>
+            <div class="radio">
+              <label>
+                <input type="radio" name="design-yes" value="yes">
+                Yes!
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="design-somewhat" value="somewhat">
+                Somewhat
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="design-no" value="no">
+                Not at all
+              </label>
+            </div>
+            <p>
+              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 3/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+            </p>
+          </div>
+          <div class="quiz-question" id="backend-question">
+            <h3>Do you enjoy taking things apart to learn how they work?:</h3>
+            <div class="radio">
+              <label>
+                <input type="radio" name="backend-yes" value="yes">
+                Yes!
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="backend-somewhat" value="somewhat">
+                Somewhat
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="backend-no" value="no">
+                Not really (and I usually can't put them back together)
+              </label>
+            </div>
+            <p>
+              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 4/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+            </p>
+          </div>
+          <div class="quiz-question" id="interaction-question">
+            <h3>After you've made a website, do you like to customize it to be easier for people to use?:</h3>
+            <div class="radio">
+              <label>
+                <input type="radio" name="interaction-yes" value="yes">
+                Yep!
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="interaction-somewhat" value="somewhat">
+                Meh... sorta
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="interaction-no" value="no">
+                No thanks!
+              </label>
+            </div>
+            <p>
+              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 5/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+            </p>
+          </div>
+          <div class="quiz-question" id="appsize-question">
+            <h3>Do you want to build massive applications or small quick ones?:</h3>
+            <div class="radio">
+              <label>
+                <input type="radio" name="appsize-large" value="large">
+                Massive
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="appsize-small" value="small">
+                Smaller
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="appsize-no" value="no-preference">
+                No Preference
+              </label>
+            </div>
+            <p>
+              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 6/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+            </p>
+          </div>
+          <div class="quiz-question" id="phone-question">
+            <h3>What kind of phone do you use?:</h3>
+            <div class="radio">
+              <label>
+                <input type="radio" name="phone-android" value="android">
+                Android
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="phone-apple" value="iphone">
+                iPhone
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="phone-other" value="other">
+                Other
+              </label>
+            </div>
+            <p>
+              <button class="btn btn-primary" type="button" id="name-submit">Prev</button> Question 7/7 <button class="btn btn-primary" type="button" id="name-submit">Next</button>
+            </p>
           </div>
         </form>
       </div>

@@ -1,0 +1,19 @@
+#robot{
+  width: 100px;
+  float: left;
+}
+
+h2 {
+  text-align: center;
+  padding-right: 100px;
+}
+
+.quiz-question {
+  display: none;
+  margin: 150px 0 0 50px;
+}
+
+.jumbotron {
+  text-align: center;
+  margin-bottom: 150px;
+}
